@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(134,83,255,0.18),_transparent_25%),radial-gradient(circle_at_bottom_right,_rgba(122,77,255,0.16),_transparent_18%)]" />
       <div className="absolute left-[40%] top-1/2 h-[360px] w-[360px] -translate-y-1/2 rounded-full bg-violet-500/10 blur-3xl" />
       <div className="relative mx-auto flex min-h-screen max-w-[1240px] items-center px-6 py-24 lg:py-20 lg:px-12">
-        <div className="grid w-full gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+        <div className="grid  w-full gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-white/5 px-4 py-2 text-sm text-violet-200 shadow-[0_0_40px_rgba(147,51,234,0.12)] animate-fadeInUp">
               <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.7)] dot-sparkle" />
@@ -27,7 +27,7 @@ export default function Hero() {
               <p className="text-sm uppercase tracking-[0.4em] text-violet-500 animate-slideInFromLeft">
                 Hello! I&apos;m Noor
               </p>
-              <h1 className="text-5xl font-semibold leading-tight tracking-[-0.03em] text-white md:text-6xl">
+              <h1 className="text-[47px] font-semibold leading-tight tracking-[-0.03em] text-white md:text-6xl">
                 Front-End{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-600">
                   <TextType
@@ -167,7 +167,7 @@ export default function Hero() {
                       className="text-violet-300 text-xs uppercase tracking-[0.25em] font-medium animate-fadeIn"
                       style={{ animationDelay: "0.4s" }}
                     >
-                      2+ Years Experience
+                      1+ Years Experience
                     </span>
                     <p
                       className="text-xl font-semibold text-white mt-1 animate-fadeIn"
@@ -179,7 +179,7 @@ export default function Hero() {
                       className="text-2xl font-bold text-violet-300 mt-1 group-hover/card:text-fuchsia-400 transition-colors duration-500 animate-fadeIn"
                       style={{ animationDelay: "0.6s" }}
                     >
-                      15+
+                      5+
                     </p>
                   </div>
                   <div className="border-t border-white/10 pt-4 text-slate-300">

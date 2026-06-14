@@ -33,9 +33,9 @@ export default function Navbar() {
     >
       <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-4 px-5 py-3 md:px-10 lg:px-14">
         <Link href="/" className="flex items-center gap-3">
-          <span className="text-sm font-black text-white hover:text-violet-500 shadow-md  ">
+          <div className="text-sm font-black hover:text-transparent text-white bg-clip-text hover:bg-gradient-to-r from-violet-400 to-fuchsia-500 hover:text-violet-500 shadow-md">
             N7
-          </span>
+          </div>
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">

@@ -7,23 +7,23 @@ export default function Navbar() {
   const navItems = [
     {
       name: "Home",
-      href: "#Home",
+      href: "#home",
     },
     {
       name: "About",
-      href: "#About",
+      href: "#about",
     },
     {
       name: "Projects",
-      href: "#Projects",
+      href: "#projects",
     },
     {
       name: "Skills",
-      href: "#Skills",
+      href: "#skills",
     },
     {
-      name: "Contect",
-      href: "#Contect",
+      name: "Contact",
+      href: "#contact",
     },
   ];
   const [scrolled, setScrolled] = useState(false);

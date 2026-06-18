@@ -133,6 +133,19 @@ body {
   }
 }
 
+@keyframes dashMove {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -20;
+  }
+}
+
+.animate-dash {
+  animation: dashMove 1.5s linear infinite;
+}
+
 .animate-borderMove {
   animation: borderMove 3s linear infinite;
 }

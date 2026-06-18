@@ -82,7 +82,7 @@ function TechPill({ label, style }) {
 function ProjectCard({ project, featured }) {
   return (
     <div
-      className={`relative rounded-2xl overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0_0_8px_rgba(143,51,234,0.3)] hover:border-violet-500/40 duration-200 cursor-pointer border border-violet-500/20 bg-gray-900
+      className={`relative rounded-2xl overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0_6px_10px_rgba(147,51,234,0.3)]  duration-200 cursor-pointer border border-violet-500/20 bg-gray-900 hover:bg-gradient-to-r from-violet-500/10 to-fuchsia-500/20
       } ${featured ? "col-span-full grid grid-cols-1" : ""}`}
     >
       {/* Image area */}
@@ -108,31 +108,33 @@ function ProjectCard({ project, featured }) {
 
       {/* Card body */}
       <div className="p-6 relative z-10">
-        {featured && (
-          <div className="flex items-center gap-1.5 text-xs tracking-widest uppercase text-purple-400 font-medium mb-3">
-            ✦ Featured Project
-          </div>
-        )}
         <div className="font-mono text-xs text-gray-500 mb-1">
           {project.num}
         </div>
-        <div className="flex justify-between items-start gap-3 mb-2.5">
+        <div className="flex flex-col justify-between items-start gap-3 mb-2.5">
           <h3 className="text-lg font-semibold text-white/95 tracking-tight">
             {project.title}{" "}
-            <span
-              className={`inline-block transition-transform duration-200 hover:translate-x-0.5 hover:-translate-y-0.5`}
-            >
-              ↗
-            </span>
           </h3>
           <div className="flex gap-2 flex-shrink-0">
-            {[project.github, project.live].map((href, i) => (
+            {[project.live].map((href, i) => (
               <a
                 key={i}
                 href={href}
-                className="w-8 h-8 rounded border border-purple-500/20 bg-gray-800 flex items-center justify-center text-gray-500 hover:text-purple-400 hover:border-purple-500/40 transition-colors"
+                className="group relative inline-flex items-center gap-2 px-4 py-2 text-sm font-medium uppercase tracking-[0.35em]"
               >
-                {i === 0 ? "⌥" : "↗"}
+                {/* Gradient background layer */}
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-violet-500/20 to-fuchsia-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                {/* Border with glow */}
+                <div className="absolute inset-0 rounded-lg border border-violet-500/30 group-hover:border-violet-400/60 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all duration-300" />
+
+                {/* Background */}
+                <div className="absolute inset-0 rounded-lg bg-slate-900/50 group-hover:bg-slate-800/70 transition-colors duration-300" />
+
+                {/* Text content */}
+                <span className="relative z-10 text-violet-300 group-hover:text-violet-100 transition-colors duration-300 text-[10px] md:text-xs font-mono tracking-widest">
+                  Live Demo
+                </span>
               </a>
             ))}
           </div>
@@ -153,7 +155,7 @@ function ProjectCard({ project, featured }) {
 export default function Projects() {
   return (
     <>
-      <section className="py-20 px-10 max-w-6xl mx-auto">
+      <section className="py-20 px-10 max-w-6xl mx-auto" id="projects">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 bg-violet-500/10 border border-violet-500/30 text-violet-400 text-xs font-medium tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
           <span className="w-1.5 h-1.5 bg-violet-400 rounded-full animate-pulse" />
@@ -161,12 +163,17 @@ export default function Projects() {
         </div>
 
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-tight  tracking-tight mb-16">
+        <h2 className="text-4xl md:text-4xl lg:text-5xl text-white font-bold leading-tight  tracking-tight">
           Featured{" "}
           <span className="bg-gradient-to-r from-violet-500 to-fuchsia-400 bg-clip-text text-transparent">
             Projects
           </span>
         </h2>
+
+        <p className="text-gray-400 max-w-2xl  mb-16 mt-6  text-lg md:text-xl ">
+          A selection of projects I've built — from sleek interfaces to
+          full-stack applications.
+        </p>
 
         {/* Projects grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">

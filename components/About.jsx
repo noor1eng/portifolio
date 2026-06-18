@@ -5,7 +5,7 @@ export default function About() {
   const developer = {
     name: "Mohamad Noor",
     role: "Frontend Developer",
-    seniority: "Junior-level  => Mid-Level",
+    seniority: "Mid-Level",
     location: "Syria,Hama",
     skills: {
       frontend: [
@@ -48,7 +48,7 @@ export default function About() {
   ];
 
   return (
-    <section className="relative  text-white py-24" id="#About">
+    <section className="relative  text-white py-24" id="about">
       {/* Animated Background Gradients */}
       <div className="pointer-events-none absolute inset-0" />
 
@@ -156,19 +156,19 @@ export default function About() {
                     <span>, </span>
                     <span className="text-[#dcdcaa]">Next.js</span>
                     <span>, </span>
-                    <span className="text-[#dcdcaa]">Astro</span>
+                    <span className="text-[#dcdcaa]">Shadcn</span>
                     <span>,</span>
                   </>,
                   <>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <span className="text-[#dcdcaa]">TypeScript</span>
                     <span>, </span>
-                    <span className="text-[#dcdcaa]">JavaScript</span>
+                    <span className="text-[#dcdcaa]">TailwindCss</span>
                     <span>,</span>
                   </>,
                   <>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <span className="text-[#dcdcaa]">TailwindCSS</span>
+                    <span className="text-[#dcdcaa]">JavaScript</span>
                     <span>, </span>
                     <span className="text-[#dcdcaa]">CSS</span>
                     <span>, </span>
@@ -182,11 +182,20 @@ export default function About() {
                   </>,
                   <>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <span className="text-[#dcdcaa]">Figma</span>
+                    <span className="text-[#dcdcaa]">il8n</span>
                     <span>, </span>
                     <span className="text-[#dcdcaa]">Git</span>
                     <span>, </span>
                     <span className="text-[#dcdcaa]">GitHub</span>
+                    <span>,</span>
+                  </>,
+                  <>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span className="text-[#dcdcaa]">Zod</span>
+                    <span>, </span>
+                    <span className="text-[#dcdcaa]">Zustand</span>
+                    <span>, </span>
+                    <span className="text-[#dcdcaa]">React Hook Form</span>
                     <span>,</span>
                   </>,
                   <>
@@ -198,14 +207,14 @@ export default function About() {
                     &nbsp;&nbsp;
                     <span className="text-[#c586c0]">experience</span>
                     <span>: </span>
-                    <span className="text-[#b5cea8]">3+</span>
+                    <span className="text-[#b5cea8]">1+</span>
                     <span>, </span>
                     <span className="text-[#6b69a3]">{"// years"}</span>
                   </>,
                   <>
                     &nbsp;&nbsp;<span className="text-[#c586c0]">projects</span>
                     <span>: </span>
-                    <span className="text-[#b5cea8]">50+</span>
+                    <span className="text-[#b5cea8]">5+</span>
                     <span>,</span>
                   </>,
                   <>
@@ -221,10 +230,10 @@ export default function About() {
                     <span>: </span>
                     <span>{"["}</span>
                     <span className="text-[#dcdcaa]">'clean code'</span>
-                    <span>, </span>
-                    <span className="text-[#dcdcaa]">'great UX'</span>
-                    <span>, </span>
-                    <span className="text-[#dcdcaa]">'OSS'</span>
+                    <span>,</span>
+                    <span className="text-[#dcdcaa]">'great Ui Ux'</span>
+                    <span>,</span>
+                    <span className="text-[#dcdcaa]">'Responsive Design'</span>
                     <span>{"]"}</span>
                     <span>,</span>
                   </>,
@@ -299,7 +308,7 @@ export default function About() {
             {experiences.map((exp, idx) => (
               <div
                 key={idx}
-                className="group relative rounded-2xl border border-violet-500/20 bg-gradient-to-r from-white/8 to-white/3 p-6 backdrop-blur-xl shadow-[0_8px_20px_rgba(147,51,234,0.1)] hover:shadow-[0_12px_20px_rgba(145,51,234,0.25)] transition-all duration-500 overflow-hidden"
+                className="group relative rounded-2xl border border-violet-500/20 bg-gradient-to-r from-white/8 to-white/3 p-6 backdrop-blur-xl shadow-[0_8px_20px_rgba(147,51,234,0.1)] hover:shadow-[0_6px_30px_rgba(145,51,234,0.25)] transition-all duration-500 overflow-hidden"
               >
                 {/* Timeline connector - animated gradient */}
                 <div className="absolute left-8 -bottom-6 h-8 w-0.5 bg-gradient-to-b from-violet-500/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

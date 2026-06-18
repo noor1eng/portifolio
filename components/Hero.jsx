@@ -1,18 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import TextType from "./bits/TextType";
-import { FaFolder, FaInstagram } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { IoLogoGithub } from "react-icons/io5";
-import { SiTailwindcss } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { RiNextjsLine } from "react-icons/ri";
 import { FaRegFolderClosed } from "react-icons/fa6";
+import { TbBrandTypescript } from "react-icons/tb";
+
 import { CiMail } from "react-icons/ci";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden text-white">
+    <section className="relative overflow-hidden text-white" id="home">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(134,83,255,0.18),_transparent_25%),radial-gradient(circle_at_bottom_right,_rgba(122,77,255,0.16),_transparent_18%)]" />
       <div className="absolute left-[40%] top-1/2 h-[360px] w-[360px] -translate-y-1/2 rounded-full bg-violet-500/10 blur-3xl" />
       <div className="relative mx-auto flex min-h-screen max-w-[1240px] items-center px-6 py-24 lg:py-20 lg:px-12">
@@ -27,7 +25,7 @@ export default function Hero() {
               <p className="text-sm uppercase tracking-[0.4em] text-violet-500 animate-slideInFromLeft">
                 Hello! I&apos;m Noor
               </p>
-              <h1 className="text-[46px] font-semibold leading-tight tracking-[-0.03em] text-white md:text-6xl">
+              <h1 className="lg:text-[55px] text-[50px] md:block flex flex-col font-semibold leading-tight tracking-[-0.03em] animate-slideInFromLeft">
                 Front-End{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-600">
                   <TextType
@@ -45,7 +43,7 @@ export default function Hero() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 max-w-md sm:grid-cols-4">
+            <div className="grid grid-cols-2 gap-3 max-w-md sm:grid-cols-3 animate-fadeInUp">
               {["React", "Next.js", "TypeScript"].map((tech, idx) => (
                 <div
                   key={tech}
@@ -55,13 +53,13 @@ export default function Hero() {
                   {/* Animated background glow */}
                   <div className="absolute inset-0 rounded-[1.5rem] bg-gradient-to-br from-violet-500/20 to-fuchsia-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
 
-                  <span className="relative rounded-[1.5rem] flex justify-center items-center gap-2.5 border border-white/15 bg-gradient-to-br from-white/8 to-white/3 px-4 py-3 text-xs font-medium text-slate-100 shadow-[0_8px_32px_rgba(147,51,234,0.1)] hover:shadow-[0_12px_48px_rgba(147,51,234,0.25)] backdrop-blur-xl transition-all duration-500 group-hover:border-violet-400/50 group-hover:from-white/12 group-hover:to-white/5 group-hover:scale-105">
+                  <span className="relative rounded-[1.5rem] flex justify-center items-center gap-2 border border-white/15 bg-gradient-to-br from-white/8 to-white/3 px-4 py-3 text-xs font-medium text-slate-100 shadow-[0_8px_32px_rgba(147,51,234,0.1)] hover:shadow-[0_12px_48px_rgba(147,51,234,0.25)] backdrop-blur-xl transition-all duration-500 group-hover:border-violet-400/50 group-hover:from-white/12 group-hover:to-white/5 group-hover:scale-105">
                     {tech == "React" ? (
                       <FaReact className="text-cyan-400 text-sm group-hover:text-sky-300 transition-colors duration-500" />
                     ) : tech == "Next.js" ? (
                       <RiNextjsLine className="text-white text-sm group-hover:text-violet-300 transition-colors duration-500" />
                     ) : (
-                      <SiTailwindcss className="text-blue-400 text-sm group-hover:text-cyan-300 transition-colors duration-500" />
+                      <TbBrandTypescript className="text-blue-400 text-sm group-hover:text-cyan-300 transition-colors duration-500" />
                     )}
                     {tech}
                   </span>
@@ -69,10 +67,10 @@ export default function Hero() {
               ))}
             </div>
 
-            <div className="flex flex-wrap items-center gap-4 pt-2 animate-fadeInUp">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-4 pt-2 animate-fadeInUp">
               <Link
                 href="#projects"
-                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-violet-500  to-fuchsia-600 px-6 py-3 text-sm font-semibold text-white shadow-[0_16px_50px_rgba(134,83,255,0.28)] hover:bg-violet-600"
+                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-violet-500  to-fuchsia-600 px-6 py-3 text-sm font-semibold text-white shadow-[0_16px_50px_rgba(134,83,255,0.28)]"
               >
                 <FaRegFolderClosed />
                 View Projects
@@ -86,29 +84,6 @@ export default function Hero() {
                 Contact Me
               </Link>
             </div>
-
-            {/* <div className="flex items-center gap-6 pt-6 text-sm text-slate-400">
-              <div className="flex flex-col items-start gap-3 border-purple-700 border-l-[1.5px] pl-3">
-                <Link
-                  href="#"
-                  className="text-slate-200 transition hover:text-violet-500"
-                >
-                  <IoLogoGithub className="h-4 w-4" />
-                </Link>
-                <Link
-                  href="#"
-                  className="text-slate-200 transition hover:text-violet-500"
-                >
-                  <FaLinkedinIn className="h-4 w-4" />
-                </Link>
-                <Link
-                  href="#"
-                  className="text-slate-200 transition hover:text-violet-500"
-                >
-                  <FaInstagram className="h-4 w-4" />
-                </Link>
-              </div>
-            </div> */}
           </div>
 
           <div className="relative mx-auto flex max-w-[520px] justify-end group">

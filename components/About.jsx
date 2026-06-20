@@ -75,7 +75,7 @@ export default function About() {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-center mb-20">
+        <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-start mb-20">
           {/* Left: Bio Section */}
           <div className="space-y-8">
             <div
@@ -263,30 +263,61 @@ export default function About() {
                 ))}
               </div>
             </div>
+          </div>
 
-            {/* Core spanlues */}
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { label: "Attention to Detail", icon: "✨" },
-                { label: "Clean Code", icon: "🎯" },
-                { label: "User First", icon: "👥" },
-                { label: "Continuous Learning", icon: "🚀" },
-              ].map((value, idx) => (
-                <div
-                  key={idx}
-                  className="group relative rounded-2xl border border-violet-500/20 bg-gradient-to-br from-white/6 to-white/2 p-4 backdrop-blur-xl hover:border-violet-400/50 transition-all duration-500 cursor-pointer"
-                >
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-violet-500/10 to-fuchsia-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="relative text-center space-y-2">
-                    <div className="text-2xl">{value.icon}</div>
-                    <p className="text-sm font-semibold text-slate-200">
-                      {value.label}
+          {/* Right: Large-screen snapshot */}
+          <aside className="relative overflow-hidden rounded-[2rem] border border-violet-500/15 bg-slate-950/80 p-8 shadow-[0_35px_100px_rgba(15,23,42,0.3)] backdrop-blur-xl">
+            <div className="pointer-events-none absolute right-[-120px] top-16 h-72 w-72 rounded-full bg-fuchsia-500/10 blur-3xl" />
+            <div className="relative space-y-8">
+              <div className="space-y-4">
+                <p className="text-slate-400 leading-8">
+                  I build rich, layered experiences that feel balanced across
+                  large screens, with clear hierarchy and responsive structure
+                  for every viewport.
+                </p>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                {[
+                  {
+                    label: "Years",
+                    value: "1+",
+                    accent: "from-violet-400 to-fuchsia-500",
+                  },
+                  {
+                    label: "Projects",
+                    value: "5+",
+                    accent: "from-cyan-400 to-blue-500",
+                  },
+                  {
+                    label: "Toolset",
+                    value: "React · Next.js ",
+                    accent: "from-emerald-400 to-teal-500",
+                  },
+                  {
+                    label: "Status",
+                    value: "Open to work",
+                    accent: "from-fuchsia-400 to-violet-500",
+                  },
+                ].map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm"
+                  >
+                    <div
+                      className={`mb-3 h-1.5 rounded-full bg-gradient-to-r ${item.accent}`}
+                    />
+                    <p className="text-sm uppercase tracking-[0.3em] text-slate-400">
+                      {item.label}
+                    </p>
+                    <p className="mt-3 text-[18px] md:text-[20px] font-semibold text-white">
+                      {item.value}
                     </p>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          </aside>
         </div>
 
         {/* Timeline Section */}

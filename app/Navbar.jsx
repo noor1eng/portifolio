@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
   const navItems = [
@@ -28,6 +29,7 @@ export default function Navbar() {
   ];
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -68,7 +70,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
             >
               <span className="block pb-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:origin-left after:bg-gradient-to-r after:from-violet-400 after:to-fuchsia-500 after:transition-transform after:duration-300 hover:after:scale-x-100">
-                {item.name}
+                {t(item.name)}
               </span>
             </Link>
           ))}
@@ -123,7 +125,7 @@ export default function Navbar() {
                   onClick={() => setMenuOpen(false)}
                   className="group relative rounded-[1.25rem] border border-white/15 bg-gradient-to-r from-white/8 to-white/3 px-5 py-3.5 text-xs font-bold uppercase tracking-[0.2em] text-slate-100 transition-all duration-300 hover:border-violet-400/60 hover:from-white/12 hover:to-white/6 hover:shadow-[0_8px_32px_rgba(147,51,234,0.2)] hover:scale-105 active:scale-95"
                 >
-                  <span className="pl-3 block">{item.name}</span>
+                  <span className="pl-3 block">{t(item.name)}</span>
                 </Link>
               ))}
             </div>

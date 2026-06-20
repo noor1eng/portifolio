@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono, Inter, Poppins } from "next/font/google";
 import "./globals.css";
+import i18n from "./il8n";
 import Navbar from "./Navbar";
 
 const geistSans = Geist({

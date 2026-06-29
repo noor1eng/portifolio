@@ -1,3 +1,98 @@
 {
-    "Available for work" :"متاح للعمل"
+  "nav.home": "الرئيسية",
+  "nav.about": "من أنا",
+  "nav.projects": "المشاريع",
+  "nav.skills": "المهارات",
+  "nav.contact": "تواصل معي",
+
+  "hero.available": "متاح للعمل",
+  "hero.greeting": "مرحباً، أنا نور",
+  "hero.role": " واجهات أمامية",
+  "hero.dev": " مطور",
+  "hero.description": "أبني تجارب ويب حديثة ومتجاوبة وتفاعلية باستخدام كود نظيف وأحدث التقنيات.",
+  "hero.viewProjects": "عرض المشاريع",
+  "hero.contactMe": "تواصل معي",
+  "hero.portrait": "الصورة الشخصية",
+
+  "stats.experience": "أكثر من سنة خبرة",
+  "stats.projects": "مشاريع مكتملة",
+  "stats.satisfaction": "رضا العملاء",
+
+  "about.badge": "تعرف علي أكثر",
+  "about.title": "من أنا",
+  "about.subtitle": "مطور واجهات أمامية شغوف أمتلك عيناً دقيقة للتصميم والتزاماً ببناء تجارب رقمية استثنائية.",
+
+  "about.bio": "أبني تجارب رقمية غنية ومتوازنة على الشاشات الكبيرة والصغيرة، مع هيكلية واضحة وتصميم متجاوب لكل الأحجام.",
+
+  "about.years": "سنوات الخبرة",
+  "about.projects": "المشاريع",
+  "about.toolset": "الأدوات",
+  "about.status": "الحالة",
+  "about.openToWork": "متاح للعمل",
+
+  "journey.title": "رحلتي",
+  "journey.subtitle": "محطات مهمة في مسيرتي المهنية كمطور.",
+
+  "journey.2024.role": "مطور ويب",
+  "journey.2024.desc": "بدأت رحلتي مع أساسيات HTML و CSS و JavaScript.",
+
+  "journey.2025.role": "مطور واجهات مبتدئ",
+  "journey.2025.desc": "إنشاء واجهات مستخدم متجاوبة وتفاعلية باستخدام أحدث التقنيات.",
+
+  "journey.2026.role": "متخصص واجهات أمامية",
+  "journey.2026.desc": "بناء تطبيقات ويب حديثة وقابلة للتوسع باستخدام React و Next.js.",
+
+  "projects.badge": "أعمالي",
+  "projects.title": "مشاريع مميزة",
+  "projects.subtitle": "مجموعة من المشاريع التي قمت ببنائها، من واجهات أنيقة إلى تطبيقات متكاملة.",
+
+  "projects.ecommerce.title": "منصة تجارة إلكترونية",
+  "projects.ecommerce.desc": "متجر إلكتروني متكامل مع إدارة سلة المشتريات، ومدفوعات Stripe، ومخزون لحظي، ولوحة تحكم أنيقة، مع التركيز على الأداء.",
+
+  "projects.portfolio.title": "معرض أعمال المطور",
+  "projects.portfolio.desc": "موقع شخصي مبني باستخدام Next.js و TailwindCSS مع حركات سلسة، ووضع داكن، وشبكة مهارات تفاعلية، وتصميم متجاوب بالكامل.",
+
+  "projects.taskmanager.title": "إدارة المهام",
+  "projects.taskmanager.desc": "تطبيق أنيق لإدارة المهام يدعم السحب والإفلات، ومستويات الأولوية، وحفظ البيانات محلياً، والوضع الداكن، مع التركيز على تجربة مستخدم ممتازة.",
+
+  "projects.liveDemo": "معاينة مباشرة",
+  "projects.sourceCode": "الكود المصدري",
+
+   "skills.badge": "التقنية",
+   "skills.skill" : "المهارات",
+  "skills.subtitle": "التقنيات والأدوات التي أستخدمها لبناء تجارب ويب حديثة ومتجاوبة.",
+
+  "skills.tab.frontend": "الواجهة الأمامية",
+  "skills.tab.tools": "الأدوات والمكتبات",
+  "skills.tab.all": "الكل",
+
+  "skills.section.core": "الأساسيات",
+  "skills.section.frameworks": "الأطر البرمجية",
+  "skills.section.all": "جميع المهارات",
+
+  "skills.group.devtools": "أدوات التطوير",
+  "skills.group.state": "الحالة والنماذج",
+  "skills.group.validation": "التحقق والواجهات",
+
+  "skills.level.expert": "خبير",
+  "skills.level.advanced": "متقدم",
+  "skills.level.intermediate": "متوسط",
+
+  "contact.badge": "لنعمل معاً",
+  "contact.title": "هل لديك مشروع في ذهنك؟ يسعدني سماع فكرتك. أرسل رسالة ولنقم ببناء شيء رائع معاً.",
+
+  "contact.name": "الاسم",
+  "contact.email": "البريد الإلكتروني",
+  "contact.subject": "الموضوع",
+  "contact.message": "الرسالة",
+  "contact.send": "إرسال الرسالة",
+
+  "contact.location": "الموقع",
+  "contact.responseTime": "مدة الرد",
+  "contact.responseValue": "خلال 24 ساعة",
+
+  "footer.description": "أصمم تجارب ويب حديثة وسريعة مع اهتمام دقيق بكل بكسل وكل سطر من الكود.",
+  "footer.navigate": "التنقل",
+  "footer.connect": "تواصل",
+  "footer.copyright": "جميع الحقوق محفوظة"
 }

@@ -8,46 +8,72 @@ import { FaRegFolderClosed } from "react-icons/fa6";
 import { TbBrandTypescript } from "react-icons/tb";
 import { CiMail } from "react-icons/ci";
 import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/app/context/ToogleLang";
+import { motion } from "motion/react";
 
 export default function Hero() {
   const { t } = useTranslation();
+  const { lang } = useLanguage();
   return (
-    <section className="relative overflow-hidden text-white" id="home">
+    <section
+      className={`relative overflow-hidden text-white`}
+      style={{ direction: lang == "en" ? "ltr" : "rtl" }}
+      id="home"
+    >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(134,83,255,0.18),_transparent_25%),radial-gradient(circle_at_bottom_right,_rgba(122,77,255,0.16),_transparent_18%)]" />
       <div className="absolute left-[40%] top-1/2 h-[360px] w-[360px] -translate-y-1/2 rounded-full bg-violet-500/10 blur-3xl" />
       <div className="relative mx-auto flex min-h-screen max-w-[1240px] items-center px-6 py-24 lg:py-20 lg:px-12">
         <div className="grid  w-full gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-white/5 px-4 py-2 text-sm text-violet-200 shadow-[0_0_40px_rgba(147,51,234,0.12)] animate-fadeInUp">
+            <div className="inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-white/5 px-4 py-2 text-sm text-violet-200 shadow-[0_0_40px_rgba(147,51,234,0.12)]">
               <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.7)] dot-sparkle" />
-              {t("Available for work")}
+              {t("hero.available")}
             </div>
 
             <div className="space-y-4 max-w-xl">
-              <p className="text-sm uppercase tracking-[0.4em] text-violet-500 animate-slideInFromLeft">
-                {t("Hello! I&apos;m Noor")}
+              <p className="text-sm uppercase tracking-[0.4em] text-violet-500 ">
+                {t("hero.greeting")}
               </p>
-              <h1 className="lg:text-[55px] text-[50px] md:block flex flex-col font-semibold leading-tight tracking-[-0.03em] animate-slideInFromLeft">
-                Front-End{" "}
+              <motion.h1
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                className="lg:text-[55px] text-[50px] md:block flex flex-col font-semibold leading-tight tracking-[-0.03em] 
+              "
+              >
+                <span>{t("hero.role")}</span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-600">
                   <TextType
-                    text={t("Developer")}
+                    text={t("hero.dev")}
                     typingSpeed={95}
                     pauseDuration={3600}
                     showCursor={false}
                     deletingSpeed={50}
                   />
                 </span>
-              </h1>
-              <p className="text-base text-slate-300 max-w-[350px] text-[19px] leading-[1.7]">
-                I build modern, responsive and interactive web experiences using
-                clean code and the latest technologies.
-              </p>
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.7,
+                  delay: 0.5,
+                }}
+                className="text-base text-slate-300 max-w-[350px] text-[19px] leading-[1.7]"
+              >
+                {t("hero.description")}
+              </motion.p>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 max-w-md sm:grid-cols-3 animate-fadeInUp">
+            <div className="grid grid-cols-2 gap-3 max-w-md sm:grid-cols-3">
               {["React", "Next.js", "TypeScript"].map((tech, idx) => (
-                <div
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    delay: 0.7 + idx * 0.15,
+                    duration: 0.4,
+                  }}
                   key={tech}
                   className="group relative"
                   style={{ animationDelay: `${idx * 0.1}s` }}
@@ -55,7 +81,7 @@ export default function Hero() {
                   {/* Animated background glow */}
                   <div className="absolute inset-0 rounded-[1.5rem] bg-gradient-to-br from-violet-500/20 to-fuchsia-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
 
-                  <span className="relative rounded-[1.5rem] flex justify-center items-center gap-2 border border-white/15 bg-gradient-to-br from-white/8 to-white/3 px-4 py-3 text-xs font-medium text-slate-100 shadow-[0_8px_32px_rgba(147,51,234,0.1)] hover:shadow-[0_12px_48px_rgba(147,51,234,0.25)] backdrop-blur-xl transition-all duration-500 group-hover:border-violet-400/50 group-hover:from-white/12 group-hover:to-white/5 group-hover:scale-105">
+                  <span className="relative rounded-[1.5rem] flex justify-center items-center gap-2 border border-white/15 bg-gradient-to-br from-white/8 to-white/3 px-4 py-3 text-xs font-medium text-slate-100 shadow-[0_8px_32px_rgba(147,51,234,0.1)] hover:shadow-[0_12px_48px_rgba(147,51,234,0.25)] backdrop-blur-xl transition-all duration-500 group-hover:border-violet-400/50 group-hover:from-white/12 group-hover:to-white/5 ">
                     {tech == "React" ? (
                       <FaReact className="text-cyan-400 text-sm group-hover:text-sky-300 transition-colors duration-500" />
                     ) : tech == "Next.js" ? (
@@ -65,17 +91,25 @@ export default function Hero() {
                     )}
                     {tech}
                   </span>
-                </div>
+                </motion.div>
               ))}
             </div>
 
-            <div className="flex flex-wrap items-center gap-2 sm:gap-4 pt-2 animate-fadeInUp">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.8,
+                duration: 0.7,
+              }}
+              className="flex items-center flex-wrap justify-center sm:justify-start gap-4 sm:gap-4 pt-2 "
+            >
               <Link
                 href="#projects"
                 className="inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-violet-500  to-fuchsia-600 px-6 py-3 text-sm font-semibold text-white shadow-[0_16px_50px_rgba(134,83,255,0.28)]"
               >
                 <FaRegFolderClosed />
-                View Projects
+                {t("hero.viewProjects")}
                 <span aria-hidden="true">→</span>
               </Link>
               <Link
@@ -83,23 +117,23 @@ export default function Hero() {
                 className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-2xl border border-violet-500/50 bg-transparent px-6 py-3 text-sm font-semibold text-violet-100 transition hover:border-violet-600"
               >
                 <CiMail />
-                Contact Me
+                {t("hero.contactMe")}
               </Link>
-            </div>
+            </motion.div>
           </div>
 
           <div className="relative mx-auto flex max-w-[520px] justify-end group">
             {/* Animated background orbs */}
             <div
-              className="absolute -top-20 -right-20 w-72 h-72 bg-violet-500/20 rounded-full filter blur-3xl animate-pulse"
+              className="absolute -top-20 -right-20 w-72 h-72 bg-violet-500/20 rounded-full filter blur-3xl "
               style={{ animationDuration: "4s" }}
             />
             <div
-              className="absolute -bottom-20 -left-20 w-64 h-64 bg-fuchsia-500/15 rounded-full filter blur-3xl animate-pulse"
+              className="absolute -bottom-20 -left-20 w-64 h-64 bg-fuchsia-500/15 rounded-full filter blur-3xl"
               style={{ animationDuration: "5s", animationDelay: "1s" }}
             />
 
-            <div className="relative w-full max-w-[420px] rounded-[2.5rem] border border-white/20 bg-gradient-to-br from-white/5 to-white/[0.02] p-4 shadow-[0_40px_120px_rgba(0,0,0,0.65)] backdrop-blur-xl animate-fadeInUp overflow-hidden group/card hover:border-violet-400/40 transition-all duration-500">
+            <div className="relative w-full max-w-[420px] rounded-[2.5rem] border border-white/20 bg-gradient-to-br from-white/5 to-white/[0.02] p-4 shadow-[0_40px_120px_rgba(0,0,0,0.65)] backdrop-blur-xl overflow-hidden group/card hover:border-violet-400/40 transition-all duration-500">
               {/* Animated gradient border effect */}
               <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-r from-violet-500/0 via-violet-400/20 to-fuchsia-500/0 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500" />
 
@@ -116,7 +150,27 @@ export default function Hero() {
               {/* Image container with enhanced effects */}
               <div className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-[#0b0912] shadow-[inset_0_0_80px_rgba(133,77,255,0.15)] group-hover/card:shadow-[inset_0_0_120px_rgba(133,77,255,0.25)] transition-all duration-500">
                 {/* Image with hover scale effect */}
-                <div className="relative overflow-hidden h-[560px] w-full group-hover/card:scale-105 transition-transform duration-700">
+                <motion.div
+                  initial={{
+                    opacity: 0,
+                    scale: 0.85,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    scale: 1,
+                    y: [0, -8, 0],
+                  }}
+                  transition={{
+                    opacity: { duration: 0.7 },
+                    scale: { duration: 0.7 },
+                    y: {
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    },
+                  }}
+                  className="relative overflow-hidden h-[560px] w-full group-hover/card:scale-105 transition-transform duration-700"
+                >
                   <Image
                     src="/avatar-transparent.png"
                     alt="Portrait"
@@ -130,7 +184,7 @@ export default function Hero() {
                   <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-950/95 via-slate-950/50 to-transparent group-hover/card:h-24 transition-all duration-500" />
 
                   {/* Animated light effect on hover */}
-                </div>
+                </motion.div>
               </div>
 
               {/* Stats card with enhanced animation */}
@@ -141,33 +195,33 @@ export default function Hero() {
                 <div className="grid gap-4 pt-3">
                   <div className="grid gap-1 text-[0.8rem] text-slate-300">
                     <span
-                      className="text-violet-300 text-xs uppercase tracking-[0.25em] font-medium animate-fadeIn"
+                      className="text-violet-300 text-xs uppercase tracking-[0.25em] font-medium "
                       style={{ animationDelay: "0.4s" }}
                     >
-                      1+ Years Experience
+                      {t("stats.experience")}
                     </span>
                     <p
-                      className="text-xl font-semibold text-white mt-1 animate-fadeIn"
+                      className="text-xl font-semibold text-white mt-1 "
                       style={{ animationDelay: "0.5s" }}
                     >
-                      Projects Completed
+                      {t("stats.projects")}
                     </p>
                     <p
-                      className="text-2xl font-bold text-violet-300 mt-1 group-hover/card:text-fuchsia-400 transition-colors duration-500 animate-fadeIn"
+                      className="text-2xl font-bold text-violet-300 mt-1 group-hover/card:text-fuchsia-400 transition-colors duration-500 "
                       style={{ animationDelay: "0.6s" }}
                     >
-                      5+
+                      3+
                     </p>
                   </div>
                   <div className="border-t border-white/10 pt-4 text-slate-300">
                     <p
-                      className="text-xs uppercase tracking-[0.3em] text-slate-500 animate-fadeIn"
+                      className="text-xs uppercase tracking-[0.3em] text-slate-500 "
                       style={{ animationDelay: "0.7s" }}
                     >
-                      Client Satisfaction
+                      {t("stats.satisfaction")}
                     </p>
                     <p
-                      className="mt-2 text-2xl font-bold text-white group-hover/card:text-emerald-300 transition-colors duration-500 animate-fadeIn"
+                      className="mt-2 text-2xl font-bold text-white group-hover/card:text-emerald-300 transition-colors duration-500 "
                       style={{ animationDelay: "0.8s" }}
                     >
                       100%

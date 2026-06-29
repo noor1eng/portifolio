@@ -1,7 +1,9 @@
 import { Geist, Geist_Mono, Inter, Poppins } from "next/font/google";
 import "./globals.css";
-import i18n from "./il8n";
 import Navbar from "./Navbar";
+import "./il8n";
+import Providers from "./provider";
+import { LanguageProvider } from "./context/ToogleLang";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,8 +39,12 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${inter.variable}`}
     >
       <body>
-        <Navbar />
-        {children}
+        <LanguageProvider>
+          <Providers>
+            <Navbar />
+            {children}
+          </Providers>
+        </LanguageProvider>
       </body>
     </html>
   );

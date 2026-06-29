@@ -1,3 +1,98 @@
 {
-    "Available for work" : "Available for work"
+  "nav.home": "Home",
+  "nav.about": "About",
+  "nav.projects": "Projects",
+  "nav.skills": "Skills",
+  "nav.contact": "Contact",
+
+  "hero.available": "Open to Work",
+  "hero.greeting": "Hello! I'm Noor",
+  "hero.role": "Front-End ",
+  "hero.dev" : "Developer",
+  "hero.description": "I build modern, responsive and interactive web experiences using clean code and the latest technologies.",
+  "hero.viewProjects": "View Projects",
+  "hero.contactMe": "Contact Me",
+  "hero.portrait": "Portrait",
+
+  "stats.experience": "1+ Years Experience",
+  "stats.projects": "Projects Completed",
+  "stats.satisfaction": "Client Satisfaction",
+
+  "about.badge": "Get To Know Me",
+  "about.title": "About Me",
+  "about.subtitle": "A passionate front-end developer with a keen eye for design and a commitment to building exceptional digital experiences",
+
+  "about.bio": "I build rich, layered experiences that feel balanced across large screens, with clear hierarchy and responsive structure for every viewport.",
+
+  "about.years": "Years",
+  "about.projects": "Projects",
+  "about.toolset": "Toolset",
+  "about.status": "Status",
+  "about.openToWork": "Open to work",
+
+  "journey.title": "My Journey",
+  "journey.subtitle": "A timeline of key milestones in my development career",
+
+  "journey.2024.role": "Web Developer",
+  "journey.2024.desc": "Started journey with HTML, CSS, and JavaScript fundamentals",
+
+  "journey.2025.role": "Frontend Junior",
+  "journey.2025.desc": "Creating responsive and interactive user interfaces with latest technologies",
+
+  "journey.2026.role": "Frontend Specialist",
+  "journey.2026.desc": "Building modern, scalable web applications with React and Next.js",
+
+  "projects.badge": "My Work",
+  "projects.title": "Featured Projects",
+  "projects.subtitle": "A selection of projects I've built — from sleek interfaces to full-stack applications.",
+
+  "projects.ecommerce.title": "E-Commerce Platform",
+  "projects.ecommerce.desc": "A full-featured online store with cart management, Stripe payments, real-time inventory, and a sleek admin dashboard. Built for performance.",
+
+  "projects.portfolio.title": "Developer Portfolio",
+  "projects.portfolio.desc": "Personal portfolio built with Next.js and TailwindCSS — featuring smooth animations, dark theme, interactive skills network, and a fully responsive layout.",
+
+  "projects.taskmanager.title": "Task Manager",
+  "projects.taskmanager.desc": "A sleek task management app with drag & drop reordering, priority levels, local storage persistence, and dark mode. Built with a focus on clean UX and smooth interactions.",
+
+  "projects.liveDemo": "Live Demo",
+  "projects.sourceCode": "Source Code",
+
+  "skills.badge": "Technical",
+  "skills.skill": "Skills",
+  "skills.subtitle": "Technologies and tools I use to build modern, responsive web experiences.",
+
+  "skills.tab.frontend": "Frontend",
+  "skills.tab.tools": "Tools & Libs",
+  "skills.tab.all": "All",
+
+  "skills.section.core": "Core",
+  "skills.section.frameworks": "Frameworks",
+  "skills.section.all": "All Skills",
+
+  "skills.group.devtools": "Dev Tools",
+  "skills.group.state": "State & Forms",
+  "skills.group.validation": "Validation & UI",
+
+  "skills.level.expert": "Expert",
+  "skills.level.advanced": "Advanced",
+  "skills.level.intermediate": "Intermediate",
+  
+  "contact.badge": "Let's Work Together",
+  "contact.title": "Have a project in mind? I'd love to hear about it. Send me a message and let's build something great.",
+
+  "contact.name": "Name",
+  "contact.email": "Email",
+  "contact.subject": "Subject",
+  "contact.message": "Message",
+  "contact.send": "Send Message",
+
+  "contact.location": "Location",
+  "contact.responseTime": "Response Time",
+  "contact.responseValue": "Within 24 hours",
+
+  "footer.description": "Crafting fast, modern web experiences with meticulous attention to every pixel and every line of code.",
+  "footer.navigate": "Navigate",
+  "footer.connect": "Connect",
+  "footer.copyright": "© 2026 Mohamad Noor — All rights reserved"
 }

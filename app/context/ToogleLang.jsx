@@ -11,8 +11,11 @@ export function LanguageProvider({ children }) {
   const toggleLang = () => {
     const newLang = i18n.language === "en" ? "ar" : "en";
     i18n.changeLanguage(newLang);
-    JSON.stringify(localStorage.setItem("lang", newLang));
+    const dir = newLang == "ar" ? "rtl" : "ltr";
+    document.documentElement.dir = dir;
     setLang(newLang);
+    JSON.stringify(localStorage.setItem("lang", newLang));
+    JSON.stringify(localStorage.setItem("dir", dir));
   };
 
   return (

@@ -1,3 +1,4 @@
+"use client";
 import { IoLogoGithub } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
 import { MdMailOutline } from "react-icons/md";
@@ -144,19 +145,11 @@ export default function FooterViolet() {
         />
 
         {/* ── bottom bar ── */}
-        <div className="flex flex-col items-center justify-between gap-3 sm:flex-row">
+        <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
           <p className="font-[family-name:var(--font-dm-mono)] text-[11px] tracking-wide text-slate-500 text-center sm:text-left">
             © 2026{" "}
             <span className="text-violet-400 font-semibold">Mohamad Noor</span>{" "}
             {t("footer.copyright")}
-          </p>
-
-          <p className="font-[family-name:var(--font-dm-mono)] flex items-center gap-2 text-[11px] text-white">
-            Built with{" "}
-            <span className="text-violet-400">
-              <FaRegHeart />
-            </span>
-            <span className="text-white">By Noor</span>
           </p>
         </div>
       </div>

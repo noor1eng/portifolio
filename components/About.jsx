@@ -238,7 +238,7 @@ export default function About() {
     <section
       className="relative py-24 text-white"
       id="about"
-      style={{ direction: lang === "en" ? "ltr" : "rtl" }}
+      // style={{ direction: lang === "en" ? "ltr" : "rtl" }}
     >
       {/* Background orbs */}
       <div className="pointer-events-none absolute inset-0" />

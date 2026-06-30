@@ -24,7 +24,9 @@ export default function Navbar() {
 
   useEffect(() => {
     const lg = localStorage.getItem("lang");
+    const dir = localStorage.getItem("dir");
     i18n.changeLanguage(lg);
+    document.documentElement.dir = dir;
     const handleScroll = () => setScrolled(window.scrollY > 20);
     const handleResize = () => {
       if (window.innerWidth >= 768) setMenuOpen(false);
@@ -46,6 +48,7 @@ export default function Navbar() {
           ? "bg-white/4 border-b border-purple-500/15 shadow-[0_18px_55px_-30px_rgba(0,0,0,0.5)] backdrop-blur-xl"
           : "bg-transparent border-b border-transparent"
       }`}
+      style={{ direction: "ltr" }}
     >
       <div className="mx-auto flex max-w-[1280px] items-center justify-between md:justify-start gap-4 px-5 py-3 md:px-10 lg:px-14">
         {/* Logo */}

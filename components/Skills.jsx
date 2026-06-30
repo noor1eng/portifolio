@@ -273,11 +273,7 @@ export default function Skills() {
   const allSkills = [...core, ...frameworks];
 
   return (
-    <section
-      id="skills"
-      className="relative px-6 py-24 text-white lg:px-12"
-      style={{ direction: lang === "en" ? "ltr" : "rtl" }}
-    >
+    <section id="skills" className="relative px-6 py-24 text-white lg:px-12">
       <div className="relative mx-auto max-w-[900px]">
         {/* ── Header ── */}
         <motion.div

@@ -8,45 +8,50 @@ import { FaRegFolderClosed } from "react-icons/fa6";
 import { TbBrandTypescript } from "react-icons/tb";
 import { CiMail } from "react-icons/ci";
 import { useTranslation } from "react-i18next";
-import { useLanguage } from "@/app/context/ToogleLang";
 import { motion } from "motion/react";
+import { useLanguage } from "@/app/context/ToogleLang";
 
 export default function Hero() {
   const { t } = useTranslation();
   const { lang } = useLanguage();
   return (
-    <section
-      className={`relative overflow-hidden text-white`}
-      style={{ direction: lang == "en" ? "ltr" : "rtl" }}
-      id="home"
-    >
+    <section className={`relative overflow-hidden text-white`} id="home">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(134,83,255,0.18),_transparent_25%),radial-gradient(circle_at_bottom_right,_rgba(122,77,255,0.16),_transparent_18%)]" />
       <div className="absolute left-[40%] top-1/2 h-[360px] w-[360px] -translate-y-1/2 rounded-full bg-violet-500/10 blur-3xl" />
       <div className="relative mx-auto flex min-h-screen max-w-[1240px] items-center px-6 py-24 lg:py-20 lg:px-12">
         <div className="grid  w-full gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-white/5 px-4 py-2 text-sm text-violet-200 shadow-[0_0_40px_rgba(147,51,234,0.12)]">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-white/5 px-4 py-2 text-sm text-violet-200 shadow-[0_0_40px_rgba(147,51,234,0.12)]"
+            >
               <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.7)] dot-sparkle" />
               {t("hero.available")}
-            </div>
+            </motion.div>
 
             <div className="space-y-4 max-w-xl">
-              <p className="text-sm uppercase tracking-[0.4em] text-violet-500 ">
+              <motion.p
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-sm uppercase tracking-[0.4em] text-violet-500 "
+              >
                 {t("hero.greeting")}
-              </p>
+              </motion.p>
               <motion.h1
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7 }}
-                className="lg:text-[55px] text-[50px] md:block flex flex-col font-semibold leading-tight tracking-[-0.03em] 
-              "
+                transition={{ duration: 0.5 }}
+                className={`lg:text-[55px] text-[50px] md:block flex ${lang == "ar" ? "flex-col-reverse" : "flex-col"} font-semibold leading-tight tracking-[-0.03em]`}
               >
                 <span>{t("hero.role")}</span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-600">
                   <TextType
                     text={t("hero.dev")}
                     typingSpeed={95}
-                    pauseDuration={3600}
+                    pauseDuration={3800}
                     showCursor={false}
                     deletingSpeed={50}
                   />
@@ -56,8 +61,8 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
-                  duration: 0.7,
-                  delay: 0.5,
+                  duration: 0.5,
+                  delay: 0.4,
                 }}
                 className="text-base text-slate-300 max-w-[350px] text-[19px] leading-[1.7]"
               >
@@ -137,37 +142,15 @@ export default function Hero() {
               {/* Animated gradient border effect */}
               <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-r from-violet-500/0 via-violet-400/20 to-fuchsia-500/0 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500" />
 
-              {/* Dynamic glow orbs */}
-              <div
-                className="absolute -left-12 top-12 h-48 w-48 rounded-full bg-gradient-to-br from-violet-500/25 to-fuchsia-500/15 blur-3xl animate-float"
-                style={{ animationDuration: "6s" }}
-              />
-              <div
-                className="absolute -right-12 -bottom-8 h-56 w-56 rounded-full bg-gradient-to-br from-sky-400/15 to-violet-500/10 blur-3xl animate-float"
-                style={{ animationDuration: "7s", animationDelay: "2s" }}
-              />
-
               {/* Image container with enhanced effects */}
               <div className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-[#0b0912] shadow-[inset_0_0_80px_rgba(133,77,255,0.15)] group-hover/card:shadow-[inset_0_0_120px_rgba(133,77,255,0.25)] transition-all duration-500">
                 {/* Image with hover scale effect */}
                 <motion.div
-                  initial={{
-                    opacity: 0,
-                    scale: 0.85,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    scale: 1,
-                    y: [0, -8, 0],
-                  }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{
-                    opacity: { duration: 0.7 },
-                    scale: { duration: 0.7 },
-                    y: {
-                      duration: 4,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    },
+                    delay: 0.8,
+                    duration: 0.7,
                   }}
                   className="relative overflow-hidden h-[560px] w-full group-hover/card:scale-105 transition-transform duration-700"
                 >

@@ -175,10 +175,7 @@ function ProjectCard({ project }) {
       </div>
 
       {/* Card body */}
-      <div
-        className="flex flex-1 flex-col p-5 md:p-6"
-        style={{ direction: lang === "en" ? "ltr" : "rtl" }}
-      >
+      <div className="flex flex-1 flex-col p-5 md:p-6">
         <div className="mb-1 font-mono text-[10px] tracking-widest text-gray-600">
           {project.num}
         </div>
